@@ -11,7 +11,6 @@ XML - EXtensible Markup Language.
 3. Open a request.
 4. Send the request.
 
-
 Setting up Server: Php server
 -----------------------------
 
@@ -35,5 +34,57 @@ https://www.mamp.info/en/downloads/
 - enter password
 
 ```
+
+Ajax example
+
+```
+<script>
+    var xhr = new XMLHttpRequest();
+    // onreadystatechange is an event
+    // and function after the event is a callback function.
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4) {
+        document.getElementById('ajax').innerHTML = xhr.responseText;
+      }
+    };
+    xhr.open('GET', 'sidebar.html');
+    function sendAJAX() {
+      xhr.send();
+      document.getElementById("load").style.display = "none";
+    }
+</script>
+```
+
+Keywords:
+JSON - Javascript Object Notation
+JSON p -
+jquery provides easy way to work with jsonp
+XML
+
+Ajax Limitations
+
+```
+Ajax is limited by the same origin policy, which controls how javascript control and access content from the webserver.
+
+the ways around the same origin policy are
+
+1. create Web Proxy - web services are not limited to the same origin policy. Servers can request data from servers from other domains.
+
+2. JSON P Jason with Padding
+
+it relies on the ability to link the Javascript file across domains.
+
+Jquery is a javascript library
+
+3. CORS - Another method to make ajax request across domains is CORS or Cross Origin Resource Sharing. It is W3 recommendation.
+
+4. It has to be viewed through web servers.
+
+```
+
+
+
+
+
 
 
