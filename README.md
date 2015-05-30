@@ -82,6 +82,42 @@ Jquery is a javascript library
 
 ```
 
+JSON formatting:
+----------------
+
+JSON - There are two different ways to format JSON.
+1. An Array notation.
+2. An Object notation.
+and It is common to combine both.
+
+Properties must be quoted using double quotes
+
+```
+Array example
+
+['string',3,true,false,[1,2,3]]
+
+
+Object
+{
+  "name": "Jim",
+  "phone": "123-432-543"
+}
+
+```
+
+Parsing JSON Data
+-------------------
+
+with ajax the browser sends out the request to the webserver. and webserver sends response.
+
+The response is just plain text and we need to take the string and convert it to Javascript.
+
+
+
+
+
+
 
 
 
