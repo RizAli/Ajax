@@ -116,6 +116,118 @@ The response is just plain text and we need to take the string and convert it to
 Office Status Widget
 
 
+```
+var xhr = new XMLHttpRequest();
+xhr.onreadystatechange = function() {
+  if (xhr.readyState === 4){}
+    console.log(typeof xhr.responseText);
+};
+
+xhr.open('GET', 'data/employees.json');
+xhr.send();
+```
+
+The typeof method of XMLHttpRequest returns the following in the console.
+```
+=> XHR finished loading: GET "http://localhost/Ajax/data/employees.json".
+String
+```
+
+The ResponseText return the String
+
+```
+var xhr = new XMLHttpRequest();
+xhr.onreadystatechange = function() {
+  if (xhr.readyState === 4){}
+    console.log(xhr.responseText);
+};
+
+xhr.open('GET', 'data/employees.json');
+xhr.send();
+
+```
+
+```
+XHR finished loading: GET "http://localhost/Ajax/data/employees.json".(anonymous function) @ widget.js:19
+widget.js:15 [
+  {
+   "name": "Aimee",
+   "inoffice": false
+  },
+  {
+   "name": "Amit",
+   "inoffice": false
+  },
+  {
+   "name": "Andrew",
+   "inoffice": true
+  },
+  {
+   "name": "Ben",
+   "inoffice": true
+  },
+  {
+   "name": "Elizabeth",
+   "inoffice": true
+  },
+  {
+   "name": "Guil",
+   "inoffice": false
+  },
+  {
+   "name": "Hampton",
+   "inoffice": true
+  },
+  {
+   "name": "Jason",
+   "inoffice": true
+  },
+  {
+   "name": "Lainie",
+   "inoffice": true
+  },
+  {
+   "name": "Kenneth",
+   "inoffice": false
+  },
+  {
+   "name": "Pasan",
+   "inoffice": true
+  },
+  {
+   "name": "Shawna",
+   "inoffice": true
+  },
+  {
+   "name": "Zac",
+   "inoffice": false
+  }
+]
+
+
+```
+
+
+```
+var xhr = new XMLHttpRequest();
+xhr.onreadystatechange = function() {
+  if(xhr.readyState === 4){
+    var employees = JSON.parse(xhr.responseText); //converting string to javascript object.
+    console.log(employees);
+  }
+};
+xhr.open('GET', 'data/employees.json');
+xhr.send();
+
+```
+
+this returns in console.
+```
+XHR finished loading: GET "http://localhost/Ajax/data/employees.json".(anonymous function) @ widget.js:21
+
+widget.js:16 [Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object]
+
+```
 
 
 
