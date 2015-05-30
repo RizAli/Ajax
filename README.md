@@ -113,7 +113,7 @@ with ajax the browser sends out the request to the webserver. and webserver send
 
 The response is just plain text and we need to take the string and convert it to Javascript.
 
-
+Office Status Widget
 
 
 
