@@ -119,8 +119,9 @@ Office Status Widget
 ```
 var xhr = new XMLHttpRequest();
 xhr.onreadystatechange = function() {
-  if (xhr.readyState === 4){}
+  if (xhr.readyState === 4){
     console.log(typeof xhr.responseText);
+  }
 };
 
 xhr.open('GET', 'data/employees.json');
@@ -212,7 +213,8 @@ widget.js:15 [
 var xhr = new XMLHttpRequest();
 xhr.onreadystatechange = function() {
   if(xhr.readyState === 4){
-    var employees = JSON.parse(xhr.responseText); //converting string to javascript object.
+    //converting string to javascript object.
+    var employees = JSON.parse(xhr.responseText);
     console.log(employees);
   }
 };
@@ -228,6 +230,22 @@ XHR finished loading: GET "http://localhost/Ajax/data/employees.json".(anonymous
 widget.js:16 [Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object, Object]
 
 ```
+
+Processing JSON Data:
+---------------------
+
+
+1. Create new HTML list Item
+2. Check the "inoffice" property
+3. Get the value for the "name" property; Insert the inside the <li> tag.
+4.
+
+
+
+
+
+
+
 
 
 
