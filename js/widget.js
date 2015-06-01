@@ -9,11 +9,12 @@ name response text.
 it is a property of XMLHttpRequest object
 */
 
-var xhr = new XMLHttpRequest();
-xhr.onreadystatechange = function() {
-  if(xhr.readyState === 4) {
-    var employees = JSON.parse(xhr.responseText);
-    console.log(employees);
+var xhr = new XMLHttpRequest;
+xhr.onreadystatechange = function(){
+  if(xhr.readyState === 4){
+    console.log(xhr.responseText);
+    var employees = JSON.parse(xhr.responseText)
+    console.log(employees[0]);
   }
 };
 
