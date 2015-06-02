@@ -9,15 +9,23 @@ name response text.
 it is a property of XMLHttpRequest object
 */
 
-var xhr = new XMLHttpRequest;
-xhr.onreadystatechange = function(){
-  if(xhr.readyState === 4){
-    console.log(xhr.responseText);
-    var employees = JSON.parse(xhr.responseText)
-    console.log(employees[0]);
+var xhr = new XMLHttpRequest();
+xhr.onreadystatechange = function() {
+  if(xhr.readyState === 4) {
+    var employees = JSON.parse(xhr.responseText);
+    var statusHTML = '<ul class="bulleted">'; // open ul tag
+    for (var i=0; i<employees.length; i+=1){
+      if(employees[i].inoffice === true){
+        statusHTML += '<li class="in">';
+      } else {
+        statusHTML += '<li class="out">';
+      }
+      statusHTML += employees[i].name;
+      statusHTML += '</li>';
+    }
+    statusHTML += '</ul>';
+    document.getElementById('employeeList').innerHTML = statusHTML;
   }
 };
-
-
 xhr.open('GET', 'data/employees.json');
 xhr.send();

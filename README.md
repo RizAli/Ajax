@@ -238,7 +238,7 @@ Processing JSON Data:
 1. Create new HTML list Item
 2. Check the "inoffice" property
 3. Get the value for the "name" property; Insert the inside the <li> tag.
-4.
+4. close the <li> tag
 
 
 
