@@ -265,10 +265,8 @@ xhr.send();
 ```
 
 
-![office widge in out]('https://raw.githubusercontent.com/RizAli/Ajax/master/images/Widget_officeInOut.png')
+[office widge in out](https://raw.githubusercontent.com/RizAli/Ajax/master/images/Widget_officeInOut.png)
 
-
-Add another Widget
 
 
 
