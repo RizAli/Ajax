@@ -265,6 +265,10 @@ xhr.send();
 ```
 
 
+![alt tag]('https://raw.githubusercontent.com/RizAli/Ajax/master/images/Widget_officeInOut.png')
+
+
+Add another Widget
 
 
 
